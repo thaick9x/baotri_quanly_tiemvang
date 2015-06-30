@@ -109,6 +109,10 @@ namespace QuanLyTiemVang
 
         public void FormMain_Load(object sender, EventArgs e)
         {
+            // Everything is true, no need for sign in
+            // WARNING: must delete immediately in production release.
+            DangNhap.KiemTraDangNhap.ktradangnhap = true;
+
             if (DangNhap.KiemTraDangNhap.ktradangnhap == false)
             {
                 DangNhap_ToolStripMenuItem.Enabled = true;
