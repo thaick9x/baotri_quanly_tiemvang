@@ -134,6 +134,7 @@
             this.DonGiaBan,
             this.ThanhTien});
             resources.ApplyResources(this.dgv_ChiTietPhieuBanHang, "dgv_ChiTietPhieuBanHang");
+            this.dgv_ChiTietPhieuBanHang.MultiSelect = false;
             this.dgv_ChiTietPhieuBanHang.Name = "dgv_ChiTietPhieuBanHang";
             this.dgv_ChiTietPhieuBanHang.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ChiTietPhieuBanHang_CellEndEdit);
             // 

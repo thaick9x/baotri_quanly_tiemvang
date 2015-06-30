@@ -13,6 +13,7 @@ namespace QuanLyTiemVang.GUI
 {
     public partial class TraCuuSanPham : Form
     {
+        public uint MaSanPham_Return;
         public TraCuuSanPham()
         {
             InitializeComponent();
@@ -157,6 +158,31 @@ namespace QuanLyTiemVang.GUI
               "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dl == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void dgv_DanhSachSanPham_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // If this form is invoke is a dialog
+            if (this.Modal)
+            {
+                try
+                {
+                    uint selectedValue = Convert.ToUInt32(dgv_DanhSachSanPham.Rows[e.RowIndex].Cells[0].Value);
+                    MaSanPham_Return = selectedValue;
+                    this.Close();
+                }
+                catch (System.FormatException ex)
+                {
+                    MessageBox.Show("Giá trị mã sản phẩm không phải số nguyên dương");
+                    return;
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra");
+                    return;
+                }
+
+            }
         }
     }
 }

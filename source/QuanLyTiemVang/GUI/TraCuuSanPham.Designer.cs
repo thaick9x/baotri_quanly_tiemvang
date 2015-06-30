@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_LoaiSanPham = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -65,7 +65,7 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(195, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(284, 31);
+            this.label2.Size = new System.Drawing.Size(288, 31);
             this.label2.TabIndex = 62;
             this.label2.Text = "TRA CỨU SẢN PHẨM";
             // 
@@ -251,13 +251,14 @@
             this.dgv_DanhSachSanPham.ReadOnly = true;
             this.dgv_DanhSachSanPham.Size = new System.Drawing.Size(569, 248);
             this.dgv_DanhSachSanPham.TabIndex = 0;
+            this.dgv_DanhSachSanPham.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachSanPham_CellDoubleClick);
             // 
             // MaSach
             // 
             this.MaSach.DataPropertyName = "MaSanPham";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Green;
-            this.MaSach.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Green;
+            this.MaSach.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaSach.HeaderText = "Mã sản phẩm";
             this.MaSach.Name = "MaSach";
             this.MaSach.ReadOnly = true;
@@ -266,9 +267,9 @@
             // TenSach
             // 
             this.TenSach.DataPropertyName = "TenSanPham";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Green;
-            this.TenSach.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Green;
+            this.TenSach.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenSach.HeaderText = "Tên Sản Phẩm";
             this.TenSach.Name = "TenSach";
             this.TenSach.ReadOnly = true;
@@ -277,9 +278,9 @@
             // TacGia
             // 
             this.TacGia.DataPropertyName = "LoaiSanPham";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Green;
-            this.TacGia.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Green;
+            this.TacGia.DefaultCellStyle = dataGridViewCellStyle3;
             this.TacGia.HeaderText = "Loại Sản Phẩm";
             this.TacGia.Name = "TacGia";
             this.TacGia.ReadOnly = true;
@@ -288,9 +289,9 @@
             // TheLoai
             // 
             this.TheLoai.DataPropertyName = "SoLuongTon";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Green;
-            this.TheLoai.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Green;
+            this.TheLoai.DefaultCellStyle = dataGridViewCellStyle4;
             this.TheLoai.HeaderText = "Số Lượng Tồn";
             this.TheLoai.Name = "TheLoai";
             this.TheLoai.ReadOnly = true;
