@@ -131,9 +131,13 @@ namespace QuanLyTiemVang.GUI
             if (radio_TenKhachHang.Checked)
             {
                 kh.TenKhachHang = txt_TenKhachHang.Text;
-                dgv_DanhSachKhachHang.DataSource = KhachHangDAO.SelectKhachHangLikeTenKhachHang(kh);
+
+                txt_TenKhachHang.Text = txt_TenKhachHang.Text.Trim();
+
                 if (txt_TenKhachHang.Text == "" || txt_TenKhachHang.Text == " ")
                     MessageBox.Show("Tên khách hàng không được để trống");
+                else
+                    dgv_DanhSachKhachHang.DataSource = KhachHangDAO.SelectKhachHangLikeTenKhachHang(kh);
             }
             if (radio_LoaiKhachHang.Checked)
             {
