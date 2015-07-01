@@ -51,7 +51,7 @@ namespace QuanLyTiemVang.GUI
             }
             else
             {
-                dgv_ChiTietPhieuMuaHang.Rows[stt + 1].ReadOnly = true;
+                ////dgv_ChiTietPhieuMuaHang.Rows[stt + 1].ReadOnly = true;
                 uint masanpham;
                 try
                 {
@@ -319,13 +319,23 @@ namespace QuanLyTiemVang.GUI
         private void btn_TraCuuKhachHang_Click(object sender, EventArgs e)
         {
             TraCuuKhachHang frmTraCuuKhachHang = new TraCuuKhachHang();
-            frmTraCuuKhachHang.Show();
+            frmTraCuuKhachHang.ShowDialog();
+            txt_MaKhachHang.Text = frmTraCuuKhachHang.MaKhachHang_Return.ToString();
         }
 
         private void btn_TraCuuSanPham_Click(object sender, EventArgs e)
         {
             TraCuuSanPham frmTraCuuSanPham = new TraCuuSanPham();
-            frmTraCuuSanPham.Show();
+            frmTraCuuSanPham.ShowDialog();
+
+            // DataGridView Editing
+            int last_row = dgv_ChiTietPhieuMuaHang.RowCount - 1;
+            dgv_ChiTietPhieuMuaHang.CurrentCell = dgv_ChiTietPhieuMuaHang[1, last_row];
+            dgv_ChiTietPhieuMuaHang.BeginEdit(false);
+            dgv_ChiTietPhieuMuaHang.NotifyCurrentCellDirty(true);
+            dgv_ChiTietPhieuMuaHang.Rows[last_row].Cells[1].Value = frmTraCuuSanPham.MaSanPham_Return;
+            dgv_ChiTietPhieuMuaHang.NotifyCurrentCellDirty(false);
+            dgv_ChiTietPhieuMuaHang.EndEdit();
         }
 
         private void txt_MaKhachHang_TextChanged(object sender, EventArgs e)
