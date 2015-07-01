@@ -109,6 +109,10 @@ namespace QuanLyTiemVang
 
         public void FormMain_Load(object sender, EventArgs e)
         {
+            // Everything is true, no need for sign in
+            // WARNING: must delete immediately in production release.
+            DangNhap.KiemTraDangNhap.ktradangnhap = true;
+
             if (DangNhap.KiemTraDangNhap.ktradangnhap == false)
             {
                 DangNhap_ToolStripMenuItem.Enabled = true;
@@ -211,6 +215,15 @@ namespace QuanLyTiemVang
         {
             BaoCaoTon frmBaoCaoTon = new BaoCaoTon();
             frmBaoCaoTon.Show();
+        }
+
+        private void testInsertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //DataBase.OpenConnection();
+            
+            string sql = "insert into sanpham(TenSanPham, LoaiSanPham, SoLuongTon) values ('" + "ten san pham" + "', '" + "2" + "', " + "55" + ")";
+            DataBase.ExcuNonQuery(sql);
+            //DataBase.CloseConnection();
         }
     }
 }
