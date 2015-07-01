@@ -81,14 +81,21 @@ namespace QuanLyTiemVang.GUI
             sp.MaSanPham = masanpham;
             if (sp.MaSanPham != 0)
             {
-                if (SanPhamBUS.XoaSanPham(sp))
+                DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
+                     "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dl == DialogResult.Yes)
                 {
-                    DanhSachSanPham_Load(sender, e);
-                    TaoMoi();
-                    MessageBox.Show("Xóa thành công!!");
+                    if (SanPhamBUS.XoaSanPham(sp))
+                    {
+                        string tensp = txt_TenSanPham.Text;
+                        DanhSachSanPham_Load(sender, e);
+                        TaoMoi();
+                        MessageBox.Show("Xóa sản phẩm " + tensp + " thành công!!");
+                        masanpham = 0;
+                    }
+                    else
+                        MessageBox.Show("Xóa thất bại!!");
                 }
-                else
-                    MessageBox.Show("Xóa thất bại!!");
             }
             else
                 MessageBox.Show("Bạn chưa chọn sản phẩm để xóa!!");
