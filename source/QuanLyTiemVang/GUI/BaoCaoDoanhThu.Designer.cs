@@ -86,7 +86,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(354, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 31);
+            this.label1.Size = new System.Drawing.Size(313, 31);
             this.label1.TabIndex = 49;
             this.label1.Text = "BÁO CÁO DOANH THU";
             // 
@@ -470,9 +470,10 @@
             // dateTimePicker_NgayBaoCao
             // 
             this.dateTimePicker_NgayBaoCao.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_NgayBaoCao.CustomFormat = "dd/mm/yyyy";
+            this.dateTimePicker_NgayBaoCao.Checked = false;
+            this.dateTimePicker_NgayBaoCao.CustomFormat = "";
             this.dateTimePicker_NgayBaoCao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_NgayBaoCao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_NgayBaoCao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_NgayBaoCao.Location = new System.Drawing.Point(472, 60);
             this.dateTimePicker_NgayBaoCao.Name = "dateTimePicker_NgayBaoCao";
             this.dateTimePicker_NgayBaoCao.Size = new System.Drawing.Size(190, 26);
