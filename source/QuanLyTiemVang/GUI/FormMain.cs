@@ -216,5 +216,14 @@ namespace QuanLyTiemVang
             BaoCaoTon frmBaoCaoTon = new BaoCaoTon();
             frmBaoCaoTon.Show();
         }
+
+        private void testInsertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //DataBase.OpenConnection();
+            
+            string sql = "insert into sanpham(TenSanPham, LoaiSanPham, SoLuongTon) values ('" + "ten san pham" + "', '" + "2" + "', " + "55" + ")";
+            DataBase.ExcuNonQuery(sql);
+            //DataBase.CloseConnection();
+        }
     }
 }
