@@ -78,14 +78,23 @@ namespace QuanLyTiemVang.GUI
             hgc.MaHangGiaCong = mahanggiacong;
             if (hgc.MaHangGiaCong != 0)
             {
-                if (HangGiaCongBUS.XoaHangGiaCong(hgc))
+                DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
+                            "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dl == DialogResult.Yes)
                 {
-                    DanhSachHangGiaCong_Load(sender, e);
-                    TaoMoi();
-                    MessageBox.Show("Xóa thành công");
+                    if (HangGiaCongBUS.XoaHangGiaCong(hgc))
+                    {
+                        string ten_hgc = txt_TenHangGiaCong.Text;
+                        DanhSachHangGiaCong_Load(sender, e);
+                        TaoMoi();
+                        MessageBox.Show("Xóa hàng gia công " + ten_hgc + " thành công");
+                    }
+                    else
+                        MessageBox.Show("Xoá thất bại");
+
+                    mahanggiacong = 0;
                 }
-                else
-                    MessageBox.Show("Xoá thất bại");
+                
             }
             else
                 MessageBox.Show("Bạn chưa chọn hàng gia công để xóa");
