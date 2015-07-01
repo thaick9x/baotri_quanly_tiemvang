@@ -157,13 +157,15 @@ namespace QuanLyTiemVang
 
         private void Thoat_ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
+            /*DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
               "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dl == DialogResult.Yes)
             {
                 this.Close();
                 Application.Exit();
-            }
+            }*/
+
+            this.Close();
         }
 
         private void DangXuat_ToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -215,6 +217,20 @@ namespace QuanLyTiemVang
         {
             BaoCaoTon frmBaoCaoTon = new BaoCaoTon();
             frmBaoCaoTon.Show();
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Handle form closing confirmation.
+
+            DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
+                     "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dl == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else
+                e.Cancel = true;
         }
     }
 }
