@@ -107,9 +107,12 @@ namespace QuanLyTiemVang.GUI
             if (radio_TenSanPham.Checked)
             {
                 sp.TenSanPham = txt_TenSanPham.Text;
-                dgv_DanhSachSanPham.DataSource = SanPhamDAO.SelectSanPhamLikeTenSanPham(sp);
+
+                txt_TenSanPham.Text = txt_TenSanPham.Text.Trim();
                 if (txt_TenSanPham.Text == "" || txt_TenSanPham.Text == " ")
                     MessageBox.Show("Tên sản phẩm không được để trống");
+                else
+                    dgv_DanhSachSanPham.DataSource = SanPhamDAO.SelectSanPhamLikeTenSanPham(sp);
             }
             if (radio_LoaiSanPham.Checked)
             {
