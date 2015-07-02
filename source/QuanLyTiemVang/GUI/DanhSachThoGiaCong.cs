@@ -75,17 +75,33 @@ namespace QuanLyTiemVang.GUI
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             ThoGiaCongDTO tgc = new ThoGiaCongDTO();
-            tgc.MaTho = uint.Parse(txt_MaTho.Text);
+            try
+            {
+                tgc.MaTho = uint.Parse(txt_MaTho.Text);
+            }
+            catch (System.FormatException ex)
+            {
+                tgc.MaTho = 0;
+            }
             if (tgc.MaTho != 0)
             {
-                if (ThoGiaCongBUS.XoaThoGiaCong(tgc))
+                DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
+                            "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dl == DialogResult.Yes)
                 {
-                    DanhSachThoGiaCong_Load(sender, e);
-                    TaoMoi();
-                    MessageBox.Show("Xóa thành công");
+                    if (ThoGiaCongBUS.XoaThoGiaCong(tgc))
+                    {
+                        string ten_tho = txt_TenTho.Text;
+                        DanhSachThoGiaCong_Load(sender, e);
+                        TaoMoi();
+                        MessageBox.Show("Xóa thợ " + ten_tho + " thành công");
+                    }
+                    else
+                        MessageBox.Show("Xoá thất bại");
+
+
                 }
-                else
-                    MessageBox.Show("Xoá thất bại");
+
             }
             else
                 MessageBox.Show("Bạn chưa chọn thợ gia công để xóa");

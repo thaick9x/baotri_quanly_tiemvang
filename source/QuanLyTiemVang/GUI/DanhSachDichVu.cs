@@ -79,14 +79,23 @@ namespace QuanLyTiemVang.GUI
 
             if (dv.MaDichVu != 0)
             {
-                if (DichVuBUS.XoaDichVu(dv))
+                DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
+                            "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dl == DialogResult.Yes)
                 {
-                    DanhSachDichVu_Load(sender, e);
-                    TaoMoi();
-                    MessageBox.Show("Xóa thành công");
+                    if (DichVuBUS.XoaDichVu(dv))
+                    {
+                        string ten_dv = txt_TenDichVu.Text;
+                        DanhSachDichVu_Load(sender, e);
+                        TaoMoi();
+                        MessageBox.Show("Xóa dịch vụ " + ten_dv + " thành công");
+                    }
+                    else
+                        MessageBox.Show("Xoá thất bại");
+
+                    madichvu = 0;
                 }
-                else
-                    MessageBox.Show("Xoá thất bại");
+                
             }
             else
                 MessageBox.Show("Bạn chưa chọn dịch vụ để xóa");

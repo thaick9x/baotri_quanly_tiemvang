@@ -95,7 +95,7 @@ namespace QuanLyTiemVang.GUI
             {
                 TaiKhoanDTO tk = new TaiKhoanDTO();
                 tk.TenDangNhap = txt_TenDangNhap.Text;
-                tk.MatKhau = txt_MatKhau.Text;
+                tk.MatKhau = DataBase.getMD5(txt_MatKhau.Text);
                 tk.Email = txt_Email.Text;
                 if (TaiKhoanBUS.ThemTaiKhoan(tk))
                     MessageBox.Show("Đăng ký tài khoản thành công!");

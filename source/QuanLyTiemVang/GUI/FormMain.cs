@@ -109,6 +109,10 @@ namespace QuanLyTiemVang
 
         public void FormMain_Load(object sender, EventArgs e)
         {
+            // Everything is true, no need for sign in
+            // WARNING: must delete immediately in production release.
+            //DangNhap.KiemTraDangNhap.ktradangnhap = true;
+
             if (DangNhap.KiemTraDangNhap.ktradangnhap == false)
             {
                 DangNhap_ToolStripMenuItem.Enabled = true;
@@ -153,13 +157,15 @@ namespace QuanLyTiemVang
 
         private void Thoat_ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
+            /*DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
               "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dl == DialogResult.Yes)
             {
                 this.Close();
                 Application.Exit();
-            }
+            }*/
+
+            this.Close();
         }
 
         private void DangXuat_ToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -211,6 +217,29 @@ namespace QuanLyTiemVang
         {
             BaoCaoTon frmBaoCaoTon = new BaoCaoTon();
             frmBaoCaoTon.Show();
+        }
+
+        private void testInsertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //DataBase.OpenConnection();
+            
+            string sql = "insert into sanpham(TenSanPham, LoaiSanPham, SoLuongTon) values ('" + "ten san pham" + "', '" + "2" + "', " + "55" + ")";
+            DataBase.ExcuNonQuery(sql);
+            //DataBase.CloseConnection();
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Handle form closing confirmation.
+
+            DialogResult dl = MessageBox.Show("Bạn có thực sự muốn thoát không?",
+                     "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dl == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else
+                e.Cancel = true;
         }
     }
 }

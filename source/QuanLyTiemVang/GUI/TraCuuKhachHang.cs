@@ -13,6 +13,8 @@ namespace QuanLyTiemVang.GUI
 {
     public partial class TraCuuKhachHang : Form
     {
+        public uint MaKhachHang_Return;
+
         public TraCuuKhachHang()
         {
             InitializeComponent();
@@ -129,9 +131,13 @@ namespace QuanLyTiemVang.GUI
             if (radio_TenKhachHang.Checked)
             {
                 kh.TenKhachHang = txt_TenKhachHang.Text;
-                dgv_DanhSachKhachHang.DataSource = KhachHangDAO.SelectKhachHangLikeTenKhachHang(kh);
+
+                txt_TenKhachHang.Text = txt_TenKhachHang.Text.Trim();
+
                 if (txt_TenKhachHang.Text == "" || txt_TenKhachHang.Text == " ")
                     MessageBox.Show("Tên khách hàng không được để trống");
+                else
+                    dgv_DanhSachKhachHang.DataSource = KhachHangDAO.SelectKhachHangLikeTenKhachHang(kh);
             }
             if (radio_LoaiKhachHang.Checked)
             {
@@ -187,6 +193,35 @@ namespace QuanLyTiemVang.GUI
               "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dl == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void dgv_DanhSachKhachHang_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void dgv_DanhSachKhachHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // If this form is invoke is a dialog
+            if (this.Modal)
+            {
+                try
+                {
+                    uint selectedValue = Convert.ToUInt32(dgv_DanhSachKhachHang.Rows[e.RowIndex].Cells[0].Value);
+                    MaKhachHang_Return = selectedValue;
+                    this.Close();
+                }
+                catch (System.FormatException ex)
+                {
+                    MessageBox.Show("Giá trị mã khách hàng không phải số nguyên dương");
+                    return;
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra");
+                    return;
+                }
+
+            }
         }
     }
 }

@@ -86,7 +86,7 @@ namespace QuanLyTiemVang.GUI
             }
             else
             {
-                dgv_ChiTietPhieuBanHang.Rows[stt + 1].ReadOnly = true;
+                //dgv_ChiTietPhieuBanHang.Rows[stt + 1].ReadOnly = true;
                 uint masanpham;
                 try
                 {
@@ -102,6 +102,7 @@ namespace QuanLyTiemVang.GUI
                 if (dgv_ChiTietPhieuBanHang.Rows[stt].Cells[6].Value == null)
                     ktra_dongiaban = false;
 
+                ktra_trungmasanpham = true;
                 for (int i = 0; i < dgv_ChiTietPhieuBanHang.Rows.Count - 1; i++)
                     if (Convert.ToUInt32(dgv_ChiTietPhieuBanHang.Rows[stt].Cells[1].Value) == Convert.ToUInt32(dgv_ChiTietPhieuBanHang.Rows[i].Cells[1].Value) && i != stt)
                     {
@@ -110,8 +111,8 @@ namespace QuanLyTiemVang.GUI
                         MessageBox.Show("Sản phẩm trên đã tồn tại trong danh sách phiếu nhập!!");
                         break;
                     }
-                    else
-                        ktra_trungmasanpham = true;
+//                    else
+//                        ktra_trungmasanpham = true;
 
                 if (ktra_trungmasanpham)
                 {
@@ -403,13 +404,26 @@ namespace QuanLyTiemVang.GUI
         private void btn_TraCuuKhachHang_Click(object sender, EventArgs e)
         {
             TraCuuKhachHang frmTraCuuKhachHang = new TraCuuKhachHang();
-            frmTraCuuKhachHang.Show();
+            frmTraCuuKhachHang.ShowDialog();
+            txt_MaKhachHang.Text = frmTraCuuKhachHang.MaKhachHang_Return.ToString();
+
         }
 
         private void btn_TraCuuSanPham_Click(object sender, EventArgs e)
         {
             TraCuuSanPham frmTraCuuSanPham = new TraCuuSanPham();
-            frmTraCuuSanPham.Show();
+            frmTraCuuSanPham.ShowDialog();
+            
+            // DataGridView Editing
+            int last_row = dgv_ChiTietPhieuBanHang.RowCount - 1;
+            dgv_ChiTietPhieuBanHang.CurrentCell = dgv_ChiTietPhieuBanHang[1, last_row];
+            dgv_ChiTietPhieuBanHang.BeginEdit(false);
+            dgv_ChiTietPhieuBanHang.NotifyCurrentCellDirty(true);
+            dgv_ChiTietPhieuBanHang.Rows[last_row].Cells[1].Value = frmTraCuuSanPham.MaSanPham_Return;
+            dgv_ChiTietPhieuBanHang.NotifyCurrentCellDirty(false);
+            dgv_ChiTietPhieuBanHang.EndEdit();
+
+
         }
 
         private void btn_LapPhieuNo_Click(object sender, EventArgs e)
