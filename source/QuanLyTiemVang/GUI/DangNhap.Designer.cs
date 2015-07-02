@@ -43,8 +43,8 @@
             this.txt_TenDangNhap.Location = new System.Drawing.Point(210, 78);
             this.txt_TenDangNhap.Name = "txt_TenDangNhap";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(180, 20);
-            this.txt_TenDangNhap.TabIndex = 29;
-            this.txt_TenDangNhap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TenDangNhap_KeyUp);
+            this.txt_TenDangNhap.TabIndex = 1;
+            
             // 
             // label9
             // 
@@ -53,7 +53,7 @@
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(153, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(176, 31);
+            this.label9.Size = new System.Drawing.Size(178, 31);
             this.label9.TabIndex = 31;
             this.label9.Text = "ĐĂNG NHẬP";
             // 
@@ -84,9 +84,9 @@
             this.txt_MatKhau.Location = new System.Drawing.Point(210, 118);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(180, 20);
-            this.txt_MatKhau.TabIndex = 32;
+            this.txt_MatKhau.TabIndex = 2;
             this.txt_MatKhau.UseSystemPasswordChar = true;
-            this.txt_MatKhau.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_MatKhau_KeyUp);
+            
             // 
             // btn_Thoat
             // 
@@ -97,7 +97,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(371, 169);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(83, 28);
-            this.btn_Thoat.TabIndex = 38;
+            this.btn_Thoat.TabIndex = 5;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             this.btn_DangNhap.Location = new System.Drawing.Point(22, 169);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(120, 28);
-            this.btn_DangNhap.TabIndex = 37;
+            this.btn_DangNhap.TabIndex = 3;
             this.btn_DangNhap.Text = "Đăng nhập";
             this.btn_DangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DangNhap.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             this.btn_DangKyTaiKhoan.Location = new System.Drawing.Point(166, 169);
             this.btn_DangKyTaiKhoan.Name = "btn_DangKyTaiKhoan";
             this.btn_DangKyTaiKhoan.Size = new System.Drawing.Size(176, 28);
-            this.btn_DangKyTaiKhoan.TabIndex = 39;
+            this.btn_DangKyTaiKhoan.TabIndex = 4;
             this.btn_DangKyTaiKhoan.Text = "Đăng ký tài khoản";
             this.btn_DangKyTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DangKyTaiKhoan.UseVisualStyleBackColor = true;
@@ -136,9 +136,11 @@
             // 
             // DangNhap
             // 
+            this.AcceptButton = this.btn_DangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.CancelButton = this.btn_Thoat;
             this.ClientSize = new System.Drawing.Size(481, 237);
             this.Controls.Add(this.btn_DangKyTaiKhoan);
             this.Controls.Add(this.btn_Thoat);
