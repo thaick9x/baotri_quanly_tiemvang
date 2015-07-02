@@ -83,7 +83,7 @@ namespace QuanLyTiemVang.GUI
                 DataTable dt = TaiKhoanDAO.SelectTaiKhoanByTenDangNhap(tk);
                 if (dt != null && dt.Rows.Count > 0)
                     tk.MatKhau = Convert.ToString(dt.Rows[0]["MatKhau"]);
-                if (tk.MatKhau == txt_MatKhau.Text)
+                if (tk.MatKhau == DataBase.getMD5(txt_MatKhau.Text))
                 {
                     KiemTraDangNhap.ktradangnhap = true;
                     this.Close();
