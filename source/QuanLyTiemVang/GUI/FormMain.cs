@@ -111,7 +111,7 @@ namespace QuanLyTiemVang
         {
             // Everything is true, no need for sign in
             // WARNING: must delete immediately in production release.
-            DangNhap.KiemTraDangNhap.ktradangnhap = true;
+            //DangNhap.KiemTraDangNhap.ktradangnhap = true;
 
             if (DangNhap.KiemTraDangNhap.ktradangnhap == false)
             {
