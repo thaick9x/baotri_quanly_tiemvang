@@ -76,6 +76,8 @@ namespace QuanLyTiemVang.GUI
         {
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
             {
+                btn_DangNhap_Click(sender, e);
+                /*
                 if (txt_TenDangNhap.Text == null)
                     MessageBox.Show("Vui lòng nhập tên đăng nhập trước!");
                 TaiKhoanDTO tk = new TaiKhoanDTO();
@@ -94,7 +96,7 @@ namespace QuanLyTiemVang.GUI
                 {
                     MessageBox.Show("Tên đăng nhập hoặc Mật khẩu không hợp lệ, xin vui lòng nhập lại!");
                     ktra_matkhau = false;
-                }
+                }*/
             }
         }
 
