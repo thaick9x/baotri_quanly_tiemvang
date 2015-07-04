@@ -351,7 +351,12 @@ namespace QuanLyTiemVang.GUI
             btn_XoaPhieu.Enabled = false;
             txt_MaKhachHang.ReadOnly = false;
             txt_MaPhieu.Text = null;
+            // ignore textChange event when reset form
+            txt_MaKhachHang.TextChanged -= txt_MaKhachHang_TextChanged;
             txt_MaKhachHang.Text = null;
+            txt_MaKhachHang.TextChanged += txt_MaKhachHang_TextChanged;
+            // end ignore
+
             txt_TenKhachHang.Text = null;
             txt_DiaChi.Text = null;
             txt_TongCong.Text = null;

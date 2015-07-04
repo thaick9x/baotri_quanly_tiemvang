@@ -13,7 +13,7 @@ namespace QuanLyTiemVang
     class DataBase
     {
 
-        protected static String _connectionString = @"server=localhost;user=root;database=quanly_tiemvang;port=3306;password=;";
+        protected static String _connectionString = @"server=localhost;user=root;database=quanly_tiemvang;port=3306;password=;Convert Zero Datetime=True;";
         static MySqlConnection connection;
         public static void OpenConnection()
         {

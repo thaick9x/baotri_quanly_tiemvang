@@ -357,6 +357,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.CancelButton = this.btn_Thoat;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_LapPhieuNo);
             this.Controls.Add(this.btn_Thoat);

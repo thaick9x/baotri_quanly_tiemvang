@@ -120,30 +120,6 @@ namespace QuanLyTiemVang.GUI
             txt_Email.Text = "";
         }
 
-        private void txt_TenDangNhap_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
-                txt_MatKhau.Select();
-        }
-
-        private void txt_MatKhau_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
-                txt_XacNhanMatKhau.Select();
-        }
-
-        private void txt_XacNhanMatKhau_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
-                txt_Email.Select();
-        }
-
-        private void txt_Email_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
-                btn_DangKyTaiKhoan.Select();
-        }
-
         private void txt_TenDangNhap_TextChanged(object sender, EventArgs e)
         {
             if (txt_TenDangNhap.Text.Length < 6)

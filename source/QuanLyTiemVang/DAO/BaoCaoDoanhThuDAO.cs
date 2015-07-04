@@ -17,7 +17,7 @@ namespace QuanLyTiemVang.DAO
         public static void Insert(BaoCaoDoanhThuDTO bcdt)
         {
             string sql = "insert into BAOCAODOANHTHU (NgayBaoCao, MaDanhSachKhoanThu, MaDanhSachKhoanChi, TonQuyBanDau, TonQuyConLai) values ('" 
-                + bcdt.NgayBaoCao + "', " + bcdt.MaDanhSachKhoanThu + ", " + bcdt.MaDanhSachKhoanChi + ", " + bcdt.TonQuyBanDau + ", " + bcdt.TonQuyConLai + ")";
+                + bcdt.NgayBaoCao.ToString("yyyy-MM-dd") + "', " + bcdt.MaDanhSachKhoanThu + ", " + bcdt.MaDanhSachKhoanChi + ", " + bcdt.TonQuyBanDau + ", " + bcdt.TonQuyConLai + ")";
             DataBase.ExcuNonQuery(sql);
         }
     }

@@ -10,39 +10,41 @@ namespace QuanLyTiemVang.DAO
 {
     class KhachHangDAO
     {
+        static string column_list = "MaKhachHang, TenKhachHang, LoaiKhachHang, DiaChi, TienNoHienTai";
+
         static public DataTable SelectKhachHangLikeMaKhachHang(KhachHangDTO kh)
         {
-            string sql = "Select * from KHACHHANG where MaKhachHang like '%" + kh.MaKhachHang + "%'";
+            string sql = "Select " + column_list + " from KHACHHANG where MaKhachHang like '%" + kh.MaKhachHang + "%'";
             return DataBase.ExcuQuery(sql);
         }
         static public DataTable SelectKhachHangLikeTenKhachHang(KhachHangDTO kh)
         {
-            string sql = "Select * from KHACHHANG where TenKhachHang like '%" + kh.TenKhachHang + "%'";
+            string sql = "Select " + column_list + " from KHACHHANG where TenKhachHang like '%" + kh.TenKhachHang + "%'";
             return DataBase.ExcuQuery(sql);
         }
         static public DataTable SelectKhachHangLikeLoaiKhachHang(KhachHangDTO kh)
         {
-            string sql = "Select * from KHACHHANG where LoaiKhachHang like '%" + kh.LoaiKhachHang + "%'";
+            string sql = "Select " + column_list + " from KHACHHANG where LoaiKhachHang like '%" + kh.LoaiKhachHang + "%'";
             return DataBase.ExcuQuery(sql);
         }
         static public DataTable SelectKhachHangLikeDiaChi(KhachHangDTO kh)
         {
-            string sql = "Select * from KHACHHANG where DiaChi like '%" + kh.DiaChi + "%'";
+            string sql = "Select " + column_list + " from KHACHHANG where DiaChi like '%" + kh.DiaChi + "%'";
             return DataBase.ExcuQuery(sql);
         }
         static public DataTable SelectKhachHangByTienNoHienTai(int tiennomin, int tiennomax)
         {
-            string sql = "Select * from KHACHHANG where (TienNoHienTai >= " + tiennomin + ") and (TienNoHienTai <= " + tiennomax + ")";
+            string sql = "Select " + column_list + " from KHACHHANG where (TienNoHienTai >= " + tiennomin + ") and (TienNoHienTai <= " + tiennomax + ")";
             return DataBase.ExcuQuery(sql);
         }
         static public DataTable SelectKhachHangByMaKhachHang(uint makh)
         {
-            string sql = "select * from KHACHHANG where MaKhachHang = " + makh;
+            string sql = "Select " + column_list + " from KHACHHANG where MaKhachHang = " + makh;
             return DataBase.ExcuQuery(sql);
         }
         static public DataTable GetAllKhachHang()
         {
-            string sql = "select * from KHACHhANG";
+            string sql = "Select " + column_list + " from KHACHhANG";
             return DataBase.ExcuQuery(sql);
         }
         public static void Insert(KhachHangDTO kh)

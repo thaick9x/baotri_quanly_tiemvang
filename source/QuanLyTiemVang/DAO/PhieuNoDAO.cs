@@ -16,7 +16,7 @@ namespace QuanLyTiemVang.DAO
         }
         public static void Insert(PhieuNoDTO pn)
         {
-            string sql = "insert into PHIEUNO(MaPhieuBanHang, NgayNo, NgayTra, SoTienTra, TienConLai) values('" + pn.MaPhieuBanHang + "','" + pn.NgayNo + "','" + pn.NgayTra + "','" + pn.SoTienTra + "','" + pn.TienConLai + "')";
+            string sql = "insert into PHIEUNO(MaPhieuBanHang, NgayNo, NgayTra, SoTienTra, TienConLai) values('" + pn.MaPhieuBanHang + "','" + pn.NgayNo.ToString("yyyy-MM-dd") + "','" + pn.NgayTra.ToString("yyyy-MM-dd") + "','" + pn.SoTienTra + "','" + pn.TienConLai + "')";
             DataBase.ExcuNonQuery(sql);
         }
         public static void Delete(PhieuNoDTO pn)

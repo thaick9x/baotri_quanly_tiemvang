@@ -33,7 +33,7 @@ namespace QuanLyTiemVang.DAO
         }
         public static void Insert(PhieuBanHangDTO pbh)
         {
-            string sql = "insert into PHIEUBANHANG(MaKhachHang, NgayBan, NgayThanhToan, TongCong, SoTienThanhToan, SoTienNo) values('" + pbh.MaKhachHang + "','" + pbh.NgayBan + "','" + pbh.NgayThanhToan + "','" + pbh.TongCong + "','" + pbh.SoTienThanhToan + "','" + pbh.SoTienNo + "')";
+            string sql = "insert into PHIEUBANHANG(MaKhachHang, NgayBan, NgayThanhToan, TongCong, SoTienThanhToan, SoTienNo) values('" + pbh.MaKhachHang + "','" + pbh.NgayBan.ToString("yyyy-MM-dd") + "','" + pbh.NgayThanhToan.ToString("yyyy-MM-dd") + "','" + pbh.TongCong + "','" + pbh.SoTienThanhToan + "','" + pbh.SoTienNo + "')";
             DataBase.ExcuNonQuery(sql);
         }
         public static void Delete(PhieuBanHangDTO pbh)

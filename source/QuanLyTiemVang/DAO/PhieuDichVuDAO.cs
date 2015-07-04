@@ -21,7 +21,7 @@ namespace QuanLyTiemVang.DAO
         }
         public static void Insert(PhieuDichVuDTO pdv)
         {
-            string sql = "insert into PHIEUDICHVU(MaKhachHang, NgayDangKy, NgayGiao, TongCong) values('" + pdv.MaKhachHang + "','" + pdv.NgayDangKy + "','" + pdv.NgayGiao + "','" + pdv.TongCong + "')";
+            string sql = "insert into PHIEUDICHVU(MaKhachHang, NgayDangKy, NgayGiao, TongCong) values('" + pdv.MaKhachHang + "','" + pdv.NgayDangKy.ToString("yyyy-MM-dd") + "','" + pdv.NgayGiao.ToString("yyyy-MM-dd") + "','" + pdv.TongCong + "')";
             DataBase.ExcuNonQuery(sql);
         }
         public static void Delete(PhieuDichVuDTO pdv)

@@ -56,7 +56,7 @@
             this.btn_DangKyTaiKhoan.Location = new System.Drawing.Point(29, 257);
             this.btn_DangKyTaiKhoan.Name = "btn_DangKyTaiKhoan";
             this.btn_DangKyTaiKhoan.Size = new System.Drawing.Size(103, 28);
-            this.btn_DangKyTaiKhoan.TabIndex = 47;
+            this.btn_DangKyTaiKhoan.TabIndex = 5;
             this.btn_DangKyTaiKhoan.Text = "Đăng ký";
             this.btn_DangKyTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DangKyTaiKhoan.UseVisualStyleBackColor = true;
@@ -64,6 +64,7 @@
             // 
             // btn_Thoat
             // 
+            this.btn_Thoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Thoat.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.Color.Maroon;
             this.btn_Thoat.Image = global::QuanLyTiemVang.Properties.Resources.Close;
@@ -71,7 +72,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(283, 257);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(82, 28);
-            this.btn_Thoat.TabIndex = 46;
+            this.btn_Thoat.TabIndex = 7;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -82,19 +83,17 @@
             this.txt_MatKhau.Location = new System.Drawing.Point(185, 130);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(98, 20);
-            this.txt_MatKhau.TabIndex = 44;
+            this.txt_MatKhau.TabIndex = 2;
             this.txt_MatKhau.UseSystemPasswordChar = true;
             this.txt_MatKhau.TextChanged += new System.EventHandler(this.txt_MatKhau_TextChanged);
-            this.txt_MatKhau.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_MatKhau_KeyUp);
             // 
             // txt_TenDangNhap
             // 
             this.txt_TenDangNhap.Location = new System.Drawing.Point(185, 90);
             this.txt_TenDangNhap.Name = "txt_TenDangNhap";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(98, 20);
-            this.txt_TenDangNhap.TabIndex = 42;
+            this.txt_TenDangNhap.TabIndex = 1;
             this.txt_TenDangNhap.TextChanged += new System.EventHandler(this.txt_TenDangNhap_TextChanged);
-            this.txt_TenDangNhap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TenDangNhap_KeyUp);
             // 
             // label9
             // 
@@ -103,7 +102,7 @@
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(43, 33);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(302, 31);
+            this.label9.Size = new System.Drawing.Size(305, 31);
             this.label9.TabIndex = 43;
             this.label9.Text = "ĐĂNG KÝ TÀI KHOẢN";
             // 
@@ -134,19 +133,17 @@
             this.txt_Email.Location = new System.Drawing.Point(185, 207);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(98, 20);
-            this.txt_Email.TabIndex = 51;
+            this.txt_Email.TabIndex = 4;
             this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
-            this.txt_Email.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Email_KeyUp);
             // 
             // txt_XacNhanMatKhau
             // 
             this.txt_XacNhanMatKhau.Location = new System.Drawing.Point(185, 167);
             this.txt_XacNhanMatKhau.Name = "txt_XacNhanMatKhau";
             this.txt_XacNhanMatKhau.Size = new System.Drawing.Size(98, 20);
-            this.txt_XacNhanMatKhau.TabIndex = 50;
+            this.txt_XacNhanMatKhau.TabIndex = 3;
             this.txt_XacNhanMatKhau.UseSystemPasswordChar = true;
             this.txt_XacNhanMatKhau.TextChanged += new System.EventHandler(this.txt_XacNhanMatKhau_TextChanged);
-            this.txt_XacNhanMatKhau.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_XacNhanMatKhau_KeyUp);
             // 
             // label1
             // 
@@ -179,7 +176,7 @@
             this.btn_ThemMoi.Location = new System.Drawing.Point(148, 257);
             this.btn_ThemMoi.Name = "btn_ThemMoi";
             this.btn_ThemMoi.Size = new System.Drawing.Size(115, 28);
-            this.btn_ThemMoi.TabIndex = 52;
+            this.btn_ThemMoi.TabIndex = 6;
             this.btn_ThemMoi.Text = "Thêm mới";
             this.btn_ThemMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_ThemMoi.UseVisualStyleBackColor = true;
@@ -192,7 +189,7 @@
             this.lbl_LoiDangNhap.ForeColor = System.Drawing.Color.Blue;
             this.lbl_LoiDangNhap.Location = new System.Drawing.Point(301, 90);
             this.lbl_LoiDangNhap.Name = "lbl_LoiDangNhap";
-            this.lbl_LoiDangNhap.Size = new System.Drawing.Size(180, 21);
+            this.lbl_LoiDangNhap.Size = new System.Drawing.Size(179, 21);
             this.lbl_LoiDangNhap.TabIndex = 53;
             this.lbl_LoiDangNhap.Text = "Nhập từ 6 ký tự trở lên";
             // 
@@ -203,7 +200,7 @@
             this.lbl_MatKhau.ForeColor = System.Drawing.Color.Blue;
             this.lbl_MatKhau.Location = new System.Drawing.Point(301, 129);
             this.lbl_MatKhau.Name = "lbl_MatKhau";
-            this.lbl_MatKhau.Size = new System.Drawing.Size(180, 21);
+            this.lbl_MatKhau.Size = new System.Drawing.Size(179, 21);
             this.lbl_MatKhau.TabIndex = 54;
             this.lbl_MatKhau.Text = "Nhập từ 6 ký tự trở lên";
             // 
@@ -239,9 +236,11 @@
             // 
             // DangKyTaiKhoan
             // 
+            this.AcceptButton = this.btn_DangKyTaiKhoan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.CancelButton = this.btn_Thoat;
             this.ClientSize = new System.Drawing.Size(489, 312);
             this.Controls.Add(this.lbl_LoiEmail);
             this.Controls.Add(this.label6);

@@ -21,7 +21,7 @@ namespace QuanLyTiemVang.DAO
         }
         public static void Insert(PhieuHangGiaCongDTO phgc)
         {
-            string sql = "insert into PHIEUHANGGIACONG(MaTho, NgayGiaCong, NgayNhanHangGiaCong, TongCong) values('" + phgc.MaTho + "','" + phgc.NgayGiaCong + "','" + phgc.NgayNhanHangGiaCong + "','" + phgc.TongCong + "')";
+            string sql = "insert into PHIEUHANGGIACONG(MaTho, NgayGiaCong, NgayNhanHangGiaCong, TongCong) values('" + phgc.MaTho + "','" + phgc.NgayGiaCong.ToString("yyyy-MM-dd") + "','" + phgc.NgayNhanHangGiaCong.ToString("yyyy-MM-dd") + "','" + phgc.TongCong + "')";
             DataBase.ExcuNonQuery(sql);
         }
         public static void Delete(PhieuHangGiaCongDTO phgc)

@@ -21,7 +21,7 @@ namespace QuanLyTiemVang.DAO
         }
         public static void Insert(PhieuChiDTO pc)
         {
-            string sql = "insert into PHIEUCHI(NgayChi, TongCong) values('" + pc.NgayChi + "','" + pc.TongCong + "')";
+            string sql = "insert into PHIEUCHI(NgayChi, TongCong) values('" + pc.NgayChi.ToString("yyyy-MM-dd") + "','" + pc.TongCong + "')";
             DataBase.ExcuNonQuery(sql);
         }
         public static void Delete(PhieuChiDTO pc)
