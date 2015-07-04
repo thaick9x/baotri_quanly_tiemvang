@@ -56,6 +56,7 @@
             this.TroGiup_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HuongDanSuDung_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ThongTinUngDung_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lichSuXoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             this.DangNhap_ToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DangNhap_ToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.DangNhap_ToolStripMenuItem.Name = "DangNhap_ToolStripMenuItem";
-            this.DangNhap_ToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.DangNhap_ToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.DangNhap_ToolStripMenuItem.Text = "Đăng nhập";
             this.DangNhap_ToolStripMenuItem.Click += new System.EventHandler(this.DangNhap_ToolStripMenuItem_Click);
             // 
@@ -103,7 +104,7 @@
             this.DangXuat_ToolStripMenuItem1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DangXuat_ToolStripMenuItem1.ForeColor = System.Drawing.Color.Blue;
             this.DangXuat_ToolStripMenuItem1.Name = "DangXuat_ToolStripMenuItem1";
-            this.DangXuat_ToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.DangXuat_ToolStripMenuItem1.Size = new System.Drawing.Size(150, 24);
             this.DangXuat_ToolStripMenuItem1.Text = "Đăng xuất";
             this.DangXuat_ToolStripMenuItem1.Click += new System.EventHandler(this.DangXuat_ToolStripMenuItem1_Click);
             // 
@@ -112,7 +113,7 @@
             this.Thoat_ToolStripMenuItem1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Thoat_ToolStripMenuItem1.ForeColor = System.Drawing.Color.Blue;
             this.Thoat_ToolStripMenuItem1.Name = "Thoat_ToolStripMenuItem1";
-            this.Thoat_ToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.Thoat_ToolStripMenuItem1.Size = new System.Drawing.Size(150, 24);
             this.Thoat_ToolStripMenuItem1.Text = "Thoát";
             this.Thoat_ToolStripMenuItem1.Click += new System.EventHandler(this.Thoat_ToolStripMenuItem1_Click);
             // 
@@ -237,7 +238,8 @@
             // 
             this.KhachHang_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem29,
-            this.toolStripMenuItem30});
+            this.toolStripMenuItem30,
+            this.lichSuXoaToolStripMenuItem});
             this.KhachHang_ToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhachHang_ToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.KhachHang_ToolStripMenuItem.Name = "KhachHang_ToolStripMenuItem";
@@ -337,6 +339,13 @@
             this.ThongTinUngDung_ToolStripMenuItem.Text = "Thông tin ứng dụng";
             this.ThongTinUngDung_ToolStripMenuItem.Click += new System.EventHandler(this.ThongTinUngDung_ToolStripMenuItem_Click);
             // 
+            // lichSuXoaToolStripMenuItem
+            // 
+            this.lichSuXoaToolStripMenuItem.Name = "lichSuXoaToolStripMenuItem";
+            this.lichSuXoaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.lichSuXoaToolStripMenuItem.Text = "Lịch sử xóa";
+            this.lichSuXoaToolStripMenuItem.Click += new System.EventHandler(this.lichSuXoaToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -394,6 +403,7 @@
         private System.Windows.Forms.ToolStripMenuItem DangXuat_ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem Thoat_ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem LapBaoCaoTon_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lichSuXoaToolStripMenuItem;
     }
 }
 

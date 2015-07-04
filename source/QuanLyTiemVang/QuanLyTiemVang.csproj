@@ -79,6 +79,7 @@
     <Compile Include="DAO\ChiTietPhieuMuaHangDAO.cs" />
     <Compile Include="DAO\DanhSachKhoanChiDAO.cs" />
     <Compile Include="DAO\DanhSachKhoanThuDAO.cs" />
+    <Compile Include="DAO\IRestorableData.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
     <Compile Include="DAO\HangGiaCongDAO.cs" />
@@ -191,6 +192,12 @@
     <Compile Include="GUI\HuongDanSuDung.Designer.cs">
       <DependentUpon>HuongDanSuDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\LichSuXoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LichSuXoa.Designer.cs">
+      <DependentUpon>LichSuXoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PhieuBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HuongDanSuDung.resx">
       <DependentUpon>HuongDanSuDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LichSuXoa.resx">
+      <DependentUpon>LichSuXoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PhieuBanHang.resx">
       <DependentUpon>PhieuBanHang.cs</DependentUpon>

@@ -16,7 +16,7 @@ namespace QuanLyTiemVang.BUS
         }
         public static bool XoaKhachHang(KhachHangDTO kh)
         {
-            KhachHangDAO.Delete(kh);
+            KhachHangDAO.TempDelete(kh);
             return true;
         }
         public static bool CapNhatKhachHang(KhachHangDTO kh)

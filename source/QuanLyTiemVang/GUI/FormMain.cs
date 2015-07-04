@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QuanLyTiemVang.GUI;
+using QuanLyTiemVang.DAO;
 namespace QuanLyTiemVang
 {
     public partial class FormMain : Form
@@ -240,6 +241,12 @@ namespace QuanLyTiemVang
             }
             else
                 e.Cancel = true;
+        }
+
+        private void lichSuXoaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LichSuXoa frmLSXKhachHang = new LichSuXoa(new KhachHangDAO(), "khách hàng");
+            frmLSXKhachHang.ShowDialog();
         }
     }
 }

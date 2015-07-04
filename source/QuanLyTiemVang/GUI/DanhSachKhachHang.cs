@@ -94,7 +94,7 @@ namespace QuanLyTiemVang.GUI
                     if (KhachHangBUS.XoaKhachHang(kh))
                     {
                         string ten_kh = txt_TenKhachHang.Text;
-                        KhachHangDAO.Delete(kh);
+                        //KhachHangDAO.Delete(kh);
                         DanhSachKhachHang_Load(sender, e);
                         TaoMoi();
                         MessageBox.Show("Xóa khách hàng " + ten_kh + " thành công");
