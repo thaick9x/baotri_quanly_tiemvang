@@ -98,5 +98,11 @@ namespace QuanLyTiemVang.DAO
             kh.MaKhachHang = makh;
             Delete(kh);
         }
-}
+
+
+        public DataTable GetAllDeletedItem()
+        {
+            return GetAllTempDeletedKhachHang();
+        }
+    }
 }

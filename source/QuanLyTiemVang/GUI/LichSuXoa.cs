@@ -35,7 +35,7 @@ namespace QuanLyTiemVang.GUI
         private void btn_Restore_Click(object sender, EventArgs e)
         {
             // lay duoc cell dang select 
-            uint makh = Convert.ToUInt32(dgv_LichSuXoaKhachHang.CurrentRow.Cells["MaKhachHang"].Value);
+            uint makh = Convert.ToUInt32(dgv_LichSuXoaKhachHang.CurrentRow.Cells[0].Value);
             //MessageBox.Show(makh.ToString());
 
             innerDAO.RestoreTemp(makh);
@@ -44,16 +44,22 @@ namespace QuanLyTiemVang.GUI
 
         private void RefreshForm()
         {
-            dgv_LichSuXoaKhachHang.DataSource = KhachHangDAO.GetAllTempDeletedKhachHang();
+            dgv_LichSuXoaKhachHang.DataSource = innerDAO.GetAllDeletedItem();
         }
 
         private void btn_PermDel_Click(object sender, EventArgs e)
         {
-            // lay duoc cell dang select 
-            uint makh = Convert.ToUInt32(dgv_LichSuXoaKhachHang.CurrentRow.Cells["MaKhachHang"].Value);
+            // Dialog confirmation
+            DialogResult dl = MessageBox.Show("Bạn có thực sự muốn xóa không?",
+              "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dl == DialogResult.Yes)
+            {
+                // lay duoc cell dang select 
+                uint makh = Convert.ToUInt32(dgv_LichSuXoaKhachHang.CurrentRow.Cells[0].Value);
 
-            innerDAO.PermDelete(makh);
-            RefreshForm();
+                innerDAO.PermDelete(makh);
+                RefreshForm();
+            }
         }
     }
 }

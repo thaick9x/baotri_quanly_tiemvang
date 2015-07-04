@@ -17,7 +17,7 @@ namespace QuanLyTiemVang.BUS
 
         public static bool XoaSanPham(SanPhamDTO sp)
         {
-            SanPhamDAO.Delete(sp);
+            SanPhamDAO.TempDelete(sp);
             return true;
         }
         public static bool CapNhatSanPham(SanPhamDTO sp)

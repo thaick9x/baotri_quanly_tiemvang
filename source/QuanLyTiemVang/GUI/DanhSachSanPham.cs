@@ -147,5 +147,13 @@ namespace QuanLyTiemVang.GUI
             TraCuuSanPham frmTraCuuSanPham = new TraCuuSanPham();
             frmTraCuuSanPham.Show();
         }
+
+        private void btn_lichSuXoaSP_Click(object sender, EventArgs e)
+        {
+            LichSuXoa frmLSXSanPham = new LichSuXoa(new SanPhamDAO(), "sản phẩm");
+            frmLSXSanPham.ShowDialog();
+
+            DanhSachSanPham_Load(sender, e);
+        }
     }
 }

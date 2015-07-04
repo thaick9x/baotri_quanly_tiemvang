@@ -248,5 +248,11 @@ namespace QuanLyTiemVang
             LichSuXoa frmLSXKhachHang = new LichSuXoa(new KhachHangDAO(), "khách hàng");
             frmLSXKhachHang.ShowDialog();
         }
+
+        private void lichSuXoaSPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LichSuXoa frmLSXSanPham = new LichSuXoa(new SanPhamDAO(), "sản phẩm");
+            frmLSXSanPham.ShowDialog();
+        }
     }
 }

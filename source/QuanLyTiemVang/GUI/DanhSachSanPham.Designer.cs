@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_SoLuongTon = new System.Windows.Forms.TextBox();
             this.txt_TenSanPham = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,6 +54,7 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.btn_TimKiem = new System.Windows.Forms.Button();
+            this.btn_lichSuXoaSP = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachSanPham)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -104,8 +105,8 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "MaSanPham";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column1.Frozen = true;
             this.Column1.HeaderText = "Mã sản phẩm";
             this.Column1.Name = "Column1";
@@ -114,8 +115,8 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "TenSanPham";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column2.HeaderText = "Tên sản phẩm";
             this.Column2.Name = "Column2";
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -124,8 +125,8 @@
             // Column4
             // 
             this.Column4.DataPropertyName = "LoaiSanPham";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column4.HeaderText = "Loại sản phẩm";
             this.Column4.Name = "Column4";
             this.Column4.Width = 149;
@@ -133,8 +134,8 @@
             // Column5
             // 
             this.Column5.DataPropertyName = "SoLuongTon";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column5.HeaderText = "Số lượng tồn";
             this.Column5.Name = "Column5";
             this.Column5.Width = 130;
@@ -229,7 +230,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(236, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 31);
+            this.label1.Size = new System.Drawing.Size(326, 31);
             this.label1.TabIndex = 39;
             this.label1.Text = "DANH SÁCH SẢN PHẨM";
             // 
@@ -254,7 +255,7 @@
             this.btn_CapNhat.ForeColor = System.Drawing.Color.Maroon;
             this.btn_CapNhat.Image = global::QuanLyTiemVang.Properties.Resources.Update;
             this.btn_CapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CapNhat.Location = new System.Drawing.Point(472, 201);
+            this.btn_CapNhat.Location = new System.Drawing.Point(401, 201);
             this.btn_CapNhat.Name = "btn_CapNhat";
             this.btn_CapNhat.Size = new System.Drawing.Size(110, 28);
             this.btn_CapNhat.TabIndex = 45;
@@ -269,7 +270,7 @@
             this.btn_ThemMoi.ForeColor = System.Drawing.Color.Maroon;
             this.btn_ThemMoi.Image = global::QuanLyTiemVang.Properties.Resources.New;
             this.btn_ThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThemMoi.Location = new System.Drawing.Point(323, 201);
+            this.btn_ThemMoi.Location = new System.Drawing.Point(257, 201);
             this.btn_ThemMoi.Name = "btn_ThemMoi";
             this.btn_ThemMoi.Size = new System.Drawing.Size(116, 28);
             this.btn_ThemMoi.TabIndex = 44;
@@ -284,7 +285,7 @@
             this.btn_Xoa.ForeColor = System.Drawing.Color.Maroon;
             this.btn_Xoa.Image = global::QuanLyTiemVang.Properties.Resources.Delete;
             this.btn_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Xoa.Location = new System.Drawing.Point(186, 201);
+            this.btn_Xoa.Location = new System.Drawing.Point(147, 201);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(69, 28);
             this.btn_Xoa.TabIndex = 43;
@@ -314,7 +315,7 @@
             this.btn_TimKiem.ForeColor = System.Drawing.Color.Maroon;
             this.btn_TimKiem.Image = global::QuanLyTiemVang.Properties.Resources.Search;
             this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TimKiem.Location = new System.Drawing.Point(620, 201);
+            this.btn_TimKiem.Location = new System.Drawing.Point(532, 201);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(110, 28);
             this.btn_TimKiem.TabIndex = 46;
@@ -323,12 +324,25 @@
             this.btn_TimKiem.UseVisualStyleBackColor = true;
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
+            // btn_lichSuXoaSP
+            // 
+            this.btn_lichSuXoaSP.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lichSuXoaSP.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_lichSuXoaSP.Location = new System.Drawing.Point(655, 201);
+            this.btn_lichSuXoaSP.Name = "btn_lichSuXoaSP";
+            this.btn_lichSuXoaSP.Size = new System.Drawing.Size(111, 28);
+            this.btn_lichSuXoaSP.TabIndex = 48;
+            this.btn_lichSuXoaSP.Text = "Lịch sử xóa";
+            this.btn_lichSuXoaSP.UseVisualStyleBackColor = true;
+            this.btn_lichSuXoaSP.Click += new System.EventHandler(this.btn_lichSuXoaSP_Click);
+            // 
             // DanhSachSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(778, 576);
+            this.Controls.Add(this.btn_lichSuXoaSP);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_CapNhat);
             this.Controls.Add(this.btn_ThemMoi);
@@ -376,5 +390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button btn_lichSuXoaSP;
     }
 }

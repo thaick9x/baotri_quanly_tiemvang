@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_TienNoHienTai = new System.Windows.Forms.TextBox();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
@@ -58,6 +58,7 @@
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.btn_CapNhat = new System.Windows.Forms.Button();
             this.btn_ThemMoi = new System.Windows.Forms.Button();
+            this.btn_lichSuXoaKH = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,7 +71,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(215, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 31);
+            this.label1.Size = new System.Drawing.Size(373, 31);
             this.label1.TabIndex = 48;
             this.label1.Text = "DANH SÁCH KHÁCH HÀNG";
             // 
@@ -151,16 +152,16 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "MaKhachHang";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column1.HeaderText = "Mã khách hàng";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "TenKhachHang";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column2.HeaderText = "Tên khách hàng";
             this.Column2.Name = "Column2";
             this.Column2.Width = 180;
@@ -168,8 +169,8 @@
             // Column4
             // 
             this.Column4.DataPropertyName = "LoaiKhachHang";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column4.HeaderText = "Loại khách hàng";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -178,8 +179,8 @@
             // Column3
             // 
             this.Column3.DataPropertyName = "DiaChi";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column3.HeaderText = "Địa chỉ";
             this.Column3.Name = "Column3";
             this.Column3.Width = 135;
@@ -187,8 +188,8 @@
             // Column5
             // 
             this.Column5.DataPropertyName = "TienNoHienTai";
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column5.HeaderText = "Tiền nợ hiện tại";
             this.Column5.Name = "Column5";
             this.Column5.Width = 95;
@@ -292,7 +293,7 @@
             this.btn_Xoa.ForeColor = System.Drawing.Color.Maroon;
             this.btn_Xoa.Image = global::QuanLyTiemVang.Properties.Resources.Delete;
             this.btn_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Xoa.Location = new System.Drawing.Point(186, 234);
+            this.btn_Xoa.Location = new System.Drawing.Point(155, 234);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(71, 28);
             this.btn_Xoa.TabIndex = 52;
@@ -322,7 +323,7 @@
             this.btn_TimKiem.ForeColor = System.Drawing.Color.Maroon;
             this.btn_TimKiem.Image = global::QuanLyTiemVang.Properties.Resources.Search;
             this.btn_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TimKiem.Location = new System.Drawing.Point(620, 234);
+            this.btn_TimKiem.Location = new System.Drawing.Point(538, 234);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(107, 28);
             this.btn_TimKiem.TabIndex = 55;
@@ -337,7 +338,7 @@
             this.btn_CapNhat.ForeColor = System.Drawing.Color.Maroon;
             this.btn_CapNhat.Image = global::QuanLyTiemVang.Properties.Resources.Update;
             this.btn_CapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CapNhat.Location = new System.Drawing.Point(472, 234);
+            this.btn_CapNhat.Location = new System.Drawing.Point(418, 234);
             this.btn_CapNhat.Name = "btn_CapNhat";
             this.btn_CapNhat.Size = new System.Drawing.Size(107, 28);
             this.btn_CapNhat.TabIndex = 54;
@@ -352,7 +353,7 @@
             this.btn_ThemMoi.ForeColor = System.Drawing.Color.Maroon;
             this.btn_ThemMoi.Image = global::QuanLyTiemVang.Properties.Resources.New;
             this.btn_ThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThemMoi.Location = new System.Drawing.Point(323, 234);
+            this.btn_ThemMoi.Location = new System.Drawing.Point(260, 234);
             this.btn_ThemMoi.Name = "btn_ThemMoi";
             this.btn_ThemMoi.Size = new System.Drawing.Size(113, 28);
             this.btn_ThemMoi.TabIndex = 53;
@@ -361,12 +362,25 @@
             this.btn_ThemMoi.UseVisualStyleBackColor = true;
             this.btn_ThemMoi.Click += new System.EventHandler(this.btn_ThemMoi_Click);
             // 
+            // btn_lichSuXoaKH
+            // 
+            this.btn_lichSuXoaKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lichSuXoaKH.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_lichSuXoaKH.Location = new System.Drawing.Point(655, 234);
+            this.btn_lichSuXoaKH.Name = "btn_lichSuXoaKH";
+            this.btn_lichSuXoaKH.Size = new System.Drawing.Size(111, 28);
+            this.btn_lichSuXoaKH.TabIndex = 57;
+            this.btn_lichSuXoaKH.Text = "Lịch sử xóa";
+            this.btn_lichSuXoaKH.UseVisualStyleBackColor = true;
+            this.btn_lichSuXoaKH.Click += new System.EventHandler(this.btn_lichSuXoaKH_Click);
+            // 
             // DanhSachKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(778, 591);
+            this.Controls.Add(this.btn_lichSuXoaKH);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Thoat);
@@ -417,5 +431,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button btn_lichSuXoaKH;
     }
 }

@@ -48,6 +48,7 @@
             this.KhachHang_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem30 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lichSuXoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DichVu_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DanhSachDichVuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GiaCong_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,7 @@
             this.TroGiup_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HuongDanSuDung_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ThongTinUngDung_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lichSuXoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lichSuXoaSPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -209,7 +210,8 @@
             // 
             this.SanPham_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DanhSachSanPhamToolStripMenuItem,
-            this.TraCuuSanPhamToolStripMenuItem});
+            this.TraCuuSanPhamToolStripMenuItem,
+            this.lichSuXoaSPToolStripMenuItem});
             this.SanPham_ToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SanPham_ToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.SanPham_ToolStripMenuItem.Name = "SanPham_ToolStripMenuItem";
@@ -261,6 +263,13 @@
             this.toolStripMenuItem30.Size = new System.Drawing.Size(225, 24);
             this.toolStripMenuItem30.Text = "Tra cứu khách hàng";
             this.toolStripMenuItem30.Click += new System.EventHandler(this.TraCuuKhachHangToolStripMenuItem_Click);
+            // 
+            // lichSuXoaToolStripMenuItem
+            // 
+            this.lichSuXoaToolStripMenuItem.Name = "lichSuXoaToolStripMenuItem";
+            this.lichSuXoaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
+            this.lichSuXoaToolStripMenuItem.Text = "Lịch sử xóa";
+            this.lichSuXoaToolStripMenuItem.Click += new System.EventHandler(this.lichSuXoaToolStripMenuItem_Click);
             // 
             // DichVu_ToolStripMenuItem
             // 
@@ -339,12 +348,12 @@
             this.ThongTinUngDung_ToolStripMenuItem.Text = "Thông tin ứng dụng";
             this.ThongTinUngDung_ToolStripMenuItem.Click += new System.EventHandler(this.ThongTinUngDung_ToolStripMenuItem_Click);
             // 
-            // lichSuXoaToolStripMenuItem
+            // lichSuXoaSPToolStripMenuItem
             // 
-            this.lichSuXoaToolStripMenuItem.Name = "lichSuXoaToolStripMenuItem";
-            this.lichSuXoaToolStripMenuItem.Size = new System.Drawing.Size(225, 24);
-            this.lichSuXoaToolStripMenuItem.Text = "Lịch sử xóa";
-            this.lichSuXoaToolStripMenuItem.Click += new System.EventHandler(this.lichSuXoaToolStripMenuItem_Click);
+            this.lichSuXoaSPToolStripMenuItem.Name = "lichSuXoaSPToolStripMenuItem";
+            this.lichSuXoaSPToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
+            this.lichSuXoaSPToolStripMenuItem.Text = "Lịch Sử Xóa";
+            this.lichSuXoaSPToolStripMenuItem.Click += new System.EventHandler(this.lichSuXoaSPToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -404,6 +413,7 @@
         private System.Windows.Forms.ToolStripMenuItem Thoat_ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem LapBaoCaoTon_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lichSuXoaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lichSuXoaSPToolStripMenuItem;
     }
 }
 

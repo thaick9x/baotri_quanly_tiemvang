@@ -163,5 +163,13 @@ namespace QuanLyTiemVang.GUI
             TraCuuKhachHang frmTraCuuKhachHang = new TraCuuKhachHang();
             frmTraCuuKhachHang.Show();
         }
+
+        private void btn_lichSuXoaKH_Click(object sender, EventArgs e)
+        {
+            LichSuXoa frmLSXKhachHang = new LichSuXoa(new KhachHangDAO(), "khách hàng");
+            frmLSXKhachHang.ShowDialog();
+
+            DanhSachKhachHang_Load(sender, e);
+        }
     }
 }
